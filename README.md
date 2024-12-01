@@ -30,4 +30,4 @@ Sigue estos pasos para instalar el proyecto en tu entorno local:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/pagina-sorteos.git
+   git clone https://github.com/juanpablopulido/pagina-sorteos/
