@@ -1,6 +1,6 @@
 [build]
-  functions = "functions"  # La carpeta donde están las funciones serverless
-  publish = "public"       # La carpeta donde está el frontend
+  functions = "functions"  # Carpeta que contiene las funciones serverless
+  publish = "public"       # Carpeta donde se encuentra el frontend
 
 [[redirects]]
   from = "/api/*"
