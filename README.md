@@ -9,6 +9,18 @@ Una aplicación web básica para registrar participantes en sorteos mediante un 
 
 ---
 
+
+## Despliegue
+El proyecto está desplegado en dos plataformas:
+
+- Back-end: Está desplegado en Vercel y puedes acceder a la API a través de la siguiente URL:
+
+https://pagina-sorteos.vercel.app/register
+
+- Front-end: El formulario de registro está alojado en GitHub Pages:
+
+https://juanpablopulido.github.io/pagina-sorteos/public/
+
 ## Requisitos previos
 
 Asegúrate de tener instalado lo siguiente:
