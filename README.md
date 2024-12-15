@@ -31,3 +31,4 @@ Sigue estos pasos para instalar el proyecto en tu entorno local:
 1. **Clona el repositorio**:
    ```bash
    git clone https://github.com/juanpablopulido/pagina-sorteos/
+este sitio esta alojado en netlify en la siguente url https://inquisitive-tartufo-269538.netlify.app/
