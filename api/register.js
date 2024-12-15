@@ -1,21 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
+// Crear la aplicación Express
+const app = express();
+
+// Configuración de CORS
 const corsOptions = {
-  origin: '*', // Permite cualquier origen (ajústalo si es necesario)
+  origin: 'https://pagina-sorteos.vercel.app', // Permitir solo este origen (tu frontend)
   methods: ['GET', 'POST', 'OPTIONS'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
 };
 
+// Aplicar CORS a todas las rutas
 app.use(cors(corsOptions));
-// Crear la aplicación Express
-const app = express();
 
-// Middleware: Permitir solicitudes de cualquier origen
+// Middleware
 app.use(bodyParser.json());
 
 // Manejador explícito para las solicitudes OPTIONS
-app.options('/register', cors(corsOptions));  // Responde a la solicitud OPTIONS para la ruta /register
+app.options('/register', cors(corsOptions));  // Responde a la solicitud OPTIONS
 
 // Ruta POST para el registro
 app.post('/register', (req, res) => {
