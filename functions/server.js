@@ -9,13 +9,14 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/register', (req, res) => {
-    const { name, address, phone } = req.body;
+  const { name, address, phone } = req.body;
 
-    if (!name || !address || !phone) {
-        return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
-    }
+  if (!name || !address || !phone) {
+    return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
+  }
 
-    return res.status(200).json({ message: 'Registro exitoso.' });
+  res.status(200).json({ message: 'Registro exitoso.' });
 });
 
+// Exporta la aplicación para Netlify
 module.exports.handler = serverless(app);
