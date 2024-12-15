@@ -13,7 +13,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (ev
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, address, phone })
-        });
+          });
 
         const result = await response.json();
 

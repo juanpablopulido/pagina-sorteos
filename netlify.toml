@@ -1,8 +1,0 @@
-[build]
-  functions = "functions"  # Carpeta que contiene las funciones serverless
-  publish = "public"       # Carpeta donde se encuentra el frontend
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server/$1"
-  status = 200
