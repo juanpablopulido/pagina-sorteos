@@ -5,9 +5,12 @@ const cors = require('cors');
 // Crear la aplicación Express
 const app = express();
 
-// Middleware
+// Middleware: Permitir solicitudes de cualquier origen
 app.use(cors({ origin: '*' }));  // Permite solicitudes de cualquier origen
 app.use(bodyParser.json());
+
+// Manejador explícito para las solicitudes OPTIONS
+app.options('/register', cors());  // Responde a la solicitud OPTIONS
 
 // Ruta POST para el registro
 app.post('/register', (req, res) => {
