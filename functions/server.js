@@ -5,9 +5,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
+// Rutas
 app.post('/register', (req, res) => {
   const { name, address, phone } = req.body;
 
@@ -18,5 +20,5 @@ app.post('/register', (req, res) => {
   res.status(200).json({ message: 'Registro exitoso.' });
 });
 
-// Exporta la aplicación para Netlify
+// Exporta la función handler
 module.exports.handler = serverless(app);

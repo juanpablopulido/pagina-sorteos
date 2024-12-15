@@ -1,6 +1,8 @@
 [build]
-  functions = "functions"  # Carpeta donde están las serverless functions
-  publish = "public"       # Carpeta donde está tu frontend (HTML/CSS/JS)
+  functions = "functions"  # La carpeta donde están las funciones serverless
+  publish = "public"       # La carpeta donde está el frontend
 
-[functions]
-  external_node_modules = ["express", "cors", "body-parser"]
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/$1"
+  status = 200
