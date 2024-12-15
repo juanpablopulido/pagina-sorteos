@@ -1,16 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const corsOptions = {
+  origin: '*', // Permite cualquier origen (ajústalo si es necesario)
+  methods: ['GET', 'POST', 'OPTIONS'], // Métodos permitidos
+  allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
+};
 
+app.use(cors(corsOptions));
 // Crear la aplicación Express
 const app = express();
 
 // Middleware: Permitir solicitudes de cualquier origen
-app.use(cors({ origin: '*' }));  // Permite solicitudes de cualquier origen
 app.use(bodyParser.json());
 
 // Manejador explícito para las solicitudes OPTIONS
-app.options('/register', cors());  // Responde a la solicitud OPTIONS
+app.options('/register', cors(corsOptions));  // Responde a la solicitud OPTIONS para la ruta /register
 
 // Ruta POST para el registro
 app.post('/register', (req, res) => {
