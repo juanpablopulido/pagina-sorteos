@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"  # Carpeta donde están las serverless functions
+  publish = "public"       # Carpeta donde está tu frontend (HTML/CSS/JS)
+
+[functions]
+  # Si necesitas usar módulos externos de Node.js
+  external_node_modules = ["express", "cors", "body-parser"]
