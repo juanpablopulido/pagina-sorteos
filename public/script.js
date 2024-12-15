@@ -9,7 +9,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (ev
     responseMessage.textContent = 'Procesando...';
 
     try {
-        const response = await fetch('http://localhost:3000/register', {
+        const response = await fetch('https://backed-jp-site.netlify.app/.netlify/functions/server', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, address, phone })
